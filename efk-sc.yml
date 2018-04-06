@@ -3,5 +3,6 @@ kind: StorageClass
 metadata:
   name: efk-sc
 parameters:
-  type: gp2
-provisioner: kubernetes.io/aws-ebs
+  type: pd-standard
+  zones: us-central1-a, us-central1-b
+provisioner: kubernetes.io/gce-pd
