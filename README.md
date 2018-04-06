@@ -11,7 +11,7 @@ ElasticSearch Cluster (v5.2.2), Fluentd (v0.12) &amp; Kibana (v5.2.2) deployment
 # Create the EFK Namespace
 kubectl apply -f efk-namespace.yml
 
-# Create EFK Storage Class - We have used AWS EBS provisioned volumes. Modify according to your needs.
+# Create EFK Storage Class - We have used GCE provisioned volumes. Modify according to your needs.
 kubectl apply -f efk-sc.yml
 
 # Create Elasticseach Cluster - StatefulSet
