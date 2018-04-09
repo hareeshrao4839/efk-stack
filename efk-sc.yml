@@ -1,8 +1,11 @@
-apiVersion: storage.k8s.io/v1beta1
+apiVersion: storage.k8s.io/v1
 kind: StorageClass
 metadata:
+  labels:
+    addonmanager.kubernetes.io/mode: EnsureExists
+    kubernetes.io/cluster-service: "true"
   name: efk-sc
 parameters:
   type: pd-standard
-  zones: us-central1-a, us-central1-b
 provisioner: kubernetes.io/gce-pd
+
